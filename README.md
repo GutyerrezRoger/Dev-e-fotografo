@@ -5,6 +5,8 @@
 
 Este é o meu portfólio pessoal, um espaço para exibir meus projetos de desenvolvimento web e fotografia. A aplicação foi construída com o objetivo de demonstrar minhas habilidades técnicas e criativas, com foco em uma experiência de usuário (UX) fluida e visualmente atraente.
 
+https://gutyerrezroger.github.io/Dev-e-fotografo
+
 ## ✨ Destaques do Projeto
 - **Design Responsivo:** A interface se adapta perfeitamente a diferentes tamanhos de tela (desktop e mobile), garantindo uma experiência de usuário consistente e agradável em qualquer dispositivo.
 - **Navegação de Página Única:** A navegação entre as seções de portfólio (Dev e Fotografia) é feita sem recarregar a página, proporcionando uma experiência de navegação rápida e fluida.
