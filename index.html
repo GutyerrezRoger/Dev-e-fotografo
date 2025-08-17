@@ -1,66 +1,164 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gutyerrez Roger - Portfólio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  </head>
-  <body>
-    <header>
-      <h1>Gutyerrez Roger</h1>
-      <a
-        href="https://wa.me/5581985723833"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn-contato"
-      >
-        Contato
-      </a>
-    </header>
 
-    <main>
-      <section class="container">
-        <div class="texto">
-          <h2>Quem sou eu?</h2>
-          <p>
-            Um criador que se divide entre dois mundos: o do
-            desenvolvimento web e o da fotografia. Explore meus dois lados e
-            descubra como criatividade e técnica se complementam.
-          </p>
-          <div class="botoes">
-            <a href="dev.html" class="btn">Ver portfólio Dev 👨‍💻</a>
-            <a href="foto.html" class="btn">Ver portfólio Fotógrafo 📷</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gutyerrez Roger - Portfólio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <header>
+    <h1><a href="#" id="home-link">Gutyerrez Roger</a></h1>
+  </header>
+
+  <main>
+    <section id="intro-section" class="container">
+      <div class="texto">
+        <h2>Quem sou eu?</h2>
+        <p>
+          Um criador que se divide entre dois mundos: o do
+          desenvolvimento web e o da fotografia. Explore meus dois lados e
+          descubra como criatividade e técnica se complementam.
+        </p>
+        <div class="botoes">
+          <a href="#" id="btn-dev" class="btn btn-dev">Ver portfólio Dev 👨‍💻</a>
+          <a href="#" id="btn-foto" class="btn btn-foto">Ver portfólio Fotográfico 📷</a>
+        </div>
+      </div>
+      <div class="imagem">
+        <img src="img/fotoprincipal.JPG" alt="Roger" />
+      </div>
+    </section>
+
+    <section id="portfolio-dev" class="portfolio-section" style="display:none;">
+      <div class="container-portfolio">
+        <a href="#" class="btn-voltar">← Voltar</a>
+        <h2 class="titulo-portfolio">👨‍💻 Portfólio Dev</h2>
+
+        <div class="projetos-grid">
+
+          <div class="projeto-card">
+            <h3>Bikcraft: Bicicletas Elétricas e Seguros</h3>
+            <p>Este é um projeto de um site de vendas de bicicletas elétricas, com foco em design e usabilidade.</p>
+            <div class="tecnologias">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="botoes-projeto">
+              <a href="https://gutyerrezroger.github.io/BikeCraft_Origamid" target="_blank" rel="noopener noreferrer" class="btn-projeto">Live Demo</a>
+              <a href="https://github.com/GutyerrezRoger/BikeCraft_Origamid" target="_blank" rel="noopener noreferrer" class="btn-projeto btn-secundario">Repositório</a>
+            </div>
           </div>
+
+          <div class="projeto-card">
+            <h3>Cake Builder: Montador de Bolos Personalizados</h3>
+            <p>Este é um projeto interativo para um site de confeitaria, permitindo que os usuários montem bolos personalizados e vejam o preço em tempo real.</p>
+            <div class="tecnologias">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript Vanilla</span>
+            </div>
+            <div class="botoes-projeto">
+              <a href="https://gutyerrezroger.github.io/Decore-Seu-Bolo" target="_blank" rel="noopener noreferrer" class="btn-projeto">Live Demo</a>
+              <a href="https://github.com/GutyerrezRoger/Decore-Seu-Bolo?tab=readme-ov-file" target="_blank" rel="noopener noreferrer" class="btn-projeto btn-secundario">Repositório</a>
+            </div>
+          </div>
+
+          <div class="projeto-card">
+            <h3>100 DaysOfCode Challenge</h3>
+            <p>Este repositório é dedicado ao meu desafio pessoal de codar 1 hora por dia durante 100 dias, com foco em prática real, melhoria contínua e projetos para portfólio.</p>
+            <div class="tecnologias">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="botoes-projeto">
+              <a href="https://github.com/GutyerrezRoger/100DaysOfCode" target="_blank" rel="noopener noreferrer" class="btn-projeto btn-secundario">Repositório</a>
+            </div>
+          </div>
+
         </div>
-        <div class="imagem">
-          <img src="img/fotoprincipal.JPG" alt="Roger" />
+
+        <a href="https://wa.me/5581985723833" target="_blank" rel="noopener noreferrer" class="btn-contato-portfolio">
+          Vamos trabalhar juntos?
+        </a>
+      </div>
+    </section>
+
+    <section id="portfolio-foto" class="portfolio-section" style="display:none;">
+      <div class="container-portfolio">
+        <a href="#" class="btn-voltar">← Voltar</a>
+        <h2 class="titulo-portfolio">📷 Portfólio Fotográfico</h2>
+
+        <div class="projetos-grid">
+
+          <div class="projeto-foto-card" data-projeto-id="ensaio-urbano">
+            <img src="ensaios/capa_urbano.jpg" alt="Capa do álbum Ensaio Urbano" class="capa-album">
+            <h3>Ensaio Urbano</h3>
+            <p>Uma galeria de fotos de retratos feitos em ambientes urbanos, explorando luz e textura.</p>
+            <div class="tecnologias">
+              <span>Canon T6i Rebel</span>
+              <span>Lente 18-55mm</span>
+              <span>Adobe Lightroom</span>
+            </div>
+          </div>
+
+          <div class="projeto-foto-card" data-projeto-id="casamento">
+            <img src="ensaios/capa_casamento.jpg" alt="Capa do álbum de Casamento" class="capa-album">
+            <h3>Fotografia de Casamento</h3>
+            <p>Momentos inesquecíveis e emoções em eventos de casamento, com foco em detalhes e espontaneidade.</p>
+            <div class="tecnologias">
+              <span>Canon EOS 500D</span>
+              <span>Lente 50mm</span>
+              <span>Adobe Photoshop</span>
+            </div>
+          </div>
+
         </div>
-      </section>
-    </main>
+
+        <a href="https://wa.me/5581985723833" target="_blank" rel="noopener noreferrer" class="btn-contato-portfolio">
+          Fale comigo sobre fotografia
+        </a>
+      </div>
+    </section>
+    <section id="galeria-fotografia" class="galeria-section" style="display:none;">
+      <div class="container-galeria">
+        <a href="#" class="btn-voltar-galeria">← Voltar</a>
+        <h2 id="galeria-titulo">Carregando...</h2>
+        <div class="galeria-grid" id="galeria-grid">
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-  <div class="footer-content">
-    <p>Me acompanhe nas redes:</p>
-    <ul class="social-links">
-      <li>
-        <a href="https://www.instagram.com/mdsguty.raw/" target="_blank" rel="noopener noreferrer">
-          Instagram
-        </a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/gutyerrez-roger-426851155/" target="_blank" rel="noopener noreferrer">
-          LinkedIn
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/GutyerrezRoger" target="_blank" rel="noopener noreferrer">
-          GitHub
-        </a>
-      </li>
-    </ul>
-  </div>
-</footer>
-  </body>
+    <div class="footer-content">
+      <p>Me acompanhe nas redes:</p>
+      <ul class="social-links">
+        <li>
+          <a href="https://www.instagram.com/mdsguty.raw/" target="_blank" rel="noopener noreferrer">
+            Instagram
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/gutyerrez-roger-426851155/" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/GutyerrezRoger" target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
