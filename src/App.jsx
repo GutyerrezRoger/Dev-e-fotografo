@@ -1,4 +1,5 @@
 import { useState } from "react";
+import fotoPerfil from './src/fotoprincipal.JPG';
 import {
   Github,
   Linkedin,
@@ -209,10 +210,10 @@ export default function App() {
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
                 <img
-                  src="img/fotoprincipal.JPG"
-                  alt="Gutyerrez Roger"
-                  className="relative rounded-2xl shadow-2xl w-full object-cover aspect-[4/5]"
-                />
+  src={fotoPerfil} 
+  alt="Gutyerrez Roger"
+  className="relative rounded-2xl shadow-2xl w-full object-cover aspect-[4/5]"
+/>
               </div>
             </div>
           </section>
