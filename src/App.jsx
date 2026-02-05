@@ -1,5 +1,5 @@
 import { useState } from "react";
-import fotoPerfil from './src/fotoprincipal.JPG';
+import fotoPerfil from './fotoprincipal.JPG';
 import {
   Github,
   Linkedin,
