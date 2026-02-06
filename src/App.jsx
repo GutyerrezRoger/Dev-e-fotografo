@@ -14,40 +14,47 @@ import {
 // --- SEUS DADOS REAIS AQUI ---
 const devProjects = [
   {
-    id: 1,
-    title: "Bikcraft: Bicicletas Elétricas",
+    id: 3,
+    title: "Docinhos de Mainha",
     description:
-      "Site de vendas de bicicletas elétricas com foco em design e usabilidade exclusiva.",
+      "Plataforma completa de encomendas com cálculo automático e integração WhatsApp.",
+    tags: ["React", "Tailwind", "Vite"],
+    image: "print_bolo.jpg",
+    demo: "https://gutyerrezroger.github.io/Decore-Seu-Bolo",
+    repo: "https://github.com/GutyerrezRoger/Decore-Seu-Bolo",
+    featured: true,
+  },
+  {
+    id: 1,
+    title: "Bikcraft",
+    description:
+      "E-commerce de bicicletas elétricas com foco em UI Design e acessibilidade.",
     tags: ["HTML5", "CSS3", "JavaScript"],
+    image: "print_bike.jpg",
     demo: "https://gutyerrezroger.github.io/BikeCraft_Origamid",
     repo: "https://github.com/GutyerrezRoger/BikeCraft_Origamid",
+    featured: false,
   },
   {
     id: 2,
-    title: "Cronômetro de Estudos",
+    title: "Cronômetro Focus",
     description:
-      "PWA (Progressive Web App) para gerenciar tempo líquido de estudo com foco total.",
-    tags: ["React", "TailwindCSS", "Firebase"],
+      "Ferramenta de produtividade PWA para gestão de tempo de estudos.",
+    tags: ["React", "Firebase"],
+    image: "print_crono.jpg",
     demo: "https://gutyerrezroger.github.io/cronometro-estudos/",
     repo: "https://github.com/GutyerrezRoger/cronometro-estudos",
-  },
-  {
-    id: 3,
-    title: "Cake Builder",
-    description:
-      "Montador de bolos interativo: o cliente monta e vê o orçamento em tempo real.",
-    tags: ["HTML5", "CSS3", "JS Vanilla"],
-    demo: "https://gutyerrezroger.github.io/Decore-Seu-Bolo",
-    repo: "https://github.com/GutyerrezRoger/Decore-Seu-Bolo",
+    featured: false,
   },
   {
     id: 4,
-    title: "Simulado Polícia Federal",
-    description:
-      "Plataforma direta e eficiente para preparação de concursos públicos.",
-    tags: ["HTML5", "CSS3", "JavaScript"],
+    title: "Simulado PF",
+    description: "Sistema de questões para concursos com feedback imediato.",
+    tags: ["JavaScript", "Local Storage"],
+    image: "print_simulado.jpg",
     demo: "https://gutyerrezroger.github.io/SimuladoPF",
     repo: "https://github.com/GutyerrezRoger/SimuladoPF",
+    featured: false,
   },
 ];
 
@@ -209,7 +216,7 @@ export default function App() {
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
                 <img
-                  src="img/fotoprincipal.JPG"
+                  src="fotoprincipal.JPG"
                   alt="Gutyerrez Roger"
                   className="relative rounded-2xl shadow-2xl w-full object-cover aspect-[4/5]"
                 />
@@ -233,45 +240,79 @@ export default function App() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
               {devProjects.map((project) => (
                 <div
                   key={project.id}
-                  className="bg-card p-6 rounded-xl border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col h-full"
+                  className={`group bg-card rounded-xl overflow-hidden border border-gray-800 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 flex flex-col ${project.featured ? "md:col-span-2 lg:col-span-2" : ""}`}
                 >
-                  <h3 className="text-xl font-bold text-primary mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-400 text-sm mb-4 flex-1">
-                    {project.description}
-                  </p>
+                  {/* Container da Imagem (Janela) */}
+                  <div className="relative w-full h-48 overflow-hidden">
+                    {/* Overlay (Sombra para o texto ler melhor se quiser por texto em cima) */}
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10"></div>
 
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2 py-1 bg-secondary/20 text-primary text-xs font-bold rounded border border-secondary/30"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+                    {/* Imagem com Zoom no Hover */}
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                      onError={(e) => {
+                        e.target.src =
+                          "https://placehold.co/600x400/1a2426/a67951?text=Projeto+Dev";
+                      }} // Fallback se a imagem falhar
+                    />
+
+                    {/* Badge de Destaque (Só aparece se featured=true) */}
+                    {project.featured && (
+                      <div className="absolute top-4 right-4 z-20 bg-primary text-background text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                        Destaque
+                      </div>
+                    )}
                   </div>
 
-                  <div className="flex gap-3">
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      className="flex-1 text-center py-2 bg-primary text-background text-sm font-bold rounded hover:bg-secondary hover:text-white transition-colors flex items-center justify-center gap-2"
-                    >
-                      <ExternalLink size={16} /> Demo
-                    </a>
-                    <a
-                      href={project.repo}
-                      target="_blank"
-                      className="flex-1 text-center py-2 border border-primary text-primary text-sm font-bold rounded hover:bg-primary hover:text-background transition-colors"
-                    >
-                      Code
-                    </a>
+                  {/* Conteúdo */}
+                  <div className="p-6 flex flex-col flex-1">
+                    <div className="flex justify-between items-start mb-2">
+                      <h3 className="text-xl font-bold text-light group-hover:text-primary transition-colors">
+                        {project.title}
+                      </h3>
+                    </div>
+
+                    <p className="text-gray-400 text-sm mb-6 flex-1 leading-relaxed">
+                      {project.description}
+                    </p>
+
+                    {/* Tags e Botões */}
+                    <div className="mt-auto">
+                      <div className="flex flex-wrap gap-2 mb-6">
+                        {project.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="px-2 py-1 bg-background text-gray-300 text-[10px] uppercase tracking-wider font-bold rounded border border-gray-700"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      <div className="flex gap-3 pt-4 border-t border-gray-800">
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          className="flex-1 flex items-center justify-center gap-2 py-2.5 bg-primary/10 text-primary hover:bg-primary hover:text-background font-bold rounded-lg transition-all text-sm group/btn"
+                        >
+                          <ExternalLink size={16} /> Ver Projeto
+                        </a>
+                        <a
+                          href={project.repo}
+                          target="_blank"
+                          className="p-2.5 border border-gray-700 text-gray-400 hover:text-white hover:border-white rounded-lg transition-all"
+                          title="Ver Código"
+                        >
+                          <Github size={20} />
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               ))}
