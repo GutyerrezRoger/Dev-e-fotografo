@@ -89,6 +89,22 @@ const photos = [
       "ensaios/urbano/img5.jpg",
     ],
   },
+{
+    id: "praia",
+    title: "Pré Casamento",
+    description:
+      "O registro de um amor leve, eternizado em fotos",
+    cover: "ensaios/capa_praia.jpg",
+    tech: ["Canon T6i", "50mm", "Lightroom"],
+    images: [
+      "ensaios/praia/img1.jpg",
+      "ensaios/praia/img2.jpg",
+      "ensaios/praia/img3.jpg",
+      "ensaios/praia/img4.jpg",
+      "ensaios/praia/img5.jpg",
+    ],
+  },
+
   {
     id: "casamento",
     title: "Fotografia de Casamento",
