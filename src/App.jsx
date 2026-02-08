@@ -13,7 +13,6 @@ import {
 
 // --- SEUS DADOS REAIS AQUI ---
 const devProjects = [
-  
   {
     id: 5,
     title: "Caraval Game Control",
@@ -308,13 +307,22 @@ export default function App() {
                       </div>
 
                       <div className="flex gap-3 pt-4 border-t border-gray-800">
-                        <a
-                          href={project.demo}
-                          target="_blank"
-                          className="flex-1 flex items-center justify-center gap-2 py-2.5 bg-primary/10 text-primary hover:bg-primary hover:text-background font-bold rounded-lg transition-all text-sm group/btn"
-                        >
-                          <ExternalLink size={16} /> Ver Projeto
-                        </a>
+                        {/* LÓGICA DO BOTÃO DEMO: Só vira link se tiver "http" */}
+                        {project.demo.startsWith("http") ? (
+                          <a
+                            href={project.demo}
+                            target="_blank"
+                            className="flex-1 flex items-center justify-center gap-2 py-2.5 bg-primary/10 text-primary hover:bg-primary hover:text-background font-bold rounded-lg transition-all text-sm group/btn"
+                          >
+                            <ExternalLink size={16} /> Ver Projeto
+                          </a>
+                        ) : (
+                          <span className="flex-1 flex items-center justify-center gap-2 py-2.5 bg-gray-800/50 text-gray-500 font-bold rounded-lg text-sm cursor-not-allowed opacity-70">
+                            <ExternalLink size={16} /> Indisponível
+                          </span>
+                        )}
+
+                        {/* BOTÃO DO GITHUB (Sempre aparece) */}
                         <a
                           href={project.repo}
                           target="_blank"
