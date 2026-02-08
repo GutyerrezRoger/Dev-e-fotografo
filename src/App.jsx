@@ -13,6 +13,18 @@ import {
 
 // --- SEUS DADOS REAIS AQUI ---
 const devProjects = [
+  
+  {
+    id: 5,
+    title: "Caraval Game Control",
+    description:
+      "Aplicação interativa desenvolvida em React para gerenciar a experiência de um Clube do Livro temático baseado em 'Caraval'",
+    tags: ["React", "Tailwind", "BroadcastChannel API", "Lucide React"],
+    image: "print_caraval.jpg",
+    demo: "Projeto não permite o pages",
+    repo: "https://github.com/GutyerrezRoger/caraval-game-control",
+    featured: true,
+  },
   {
     id: 3,
     title: "Docinhos de Mainha",
@@ -22,7 +34,7 @@ const devProjects = [
     image: "print_bolo.jpg",
     demo: "https://gutyerrezroger.github.io/Decore-Seu-Bolo",
     repo: "https://github.com/GutyerrezRoger/Decore-Seu-Bolo",
-    featured: true,
+    featured: false,
   },
   {
     id: 1,
