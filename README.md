@@ -1,16 +1,29 @@
-# React + Vite
+# 🚀 Portfólio Duplo | Gutyerrez Roger
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um portfólio moderno, responsivo e dinâmico desenvolvido para unificar minhas duas paixões profissionais: **Desenvolvimento Web** e **Fotografia**. 
 
-Currently, two official plugins are available:
+A aplicação foi projetada para oferecer duas experiências distintas em um único lugar, permitindo que o usuário navegue entre meus projetos de código e meus álbuns fotográficos de forma fluida.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🌐 **Acesse o projeto online:** https://gutyerrezroger.github.io/Dev-e-fotografo/
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Funcionalidades
 
-## Expanding the ESLint configuration
+- **Navegação Dupla:** Abas dedicadas para Projetos Dev e Galeria de Fotos.
+- **Dark/Light Mode:** Tema personalizável que salva a preferência do usuário no navegador (`localStorage`).
+- **Galeria de Álbuns:** Visualização em grade inteligente de álbuns, com sub-navegação em formato "Masonry" para as fotos internas.
+- **Cards Interativos:** Projetos de desenvolvimento com links condicionais (botões inteligentes que desabilitam caso o projeto não tenha versão live).
+- **Totalmente Responsivo:** Menu mobile amigável e adaptável a qualquer tamanho de tela.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+Este projeto foi construído com as seguintes tecnologias:
+
+- **[React](https://reactjs.org/)** (com Vite para build rápido)
+- **[Tailwind CSS](https://tailwindcss.com/)** (para estilização rápida e modo escuro nativo)
+- **[Lucide React](https://lucide.dev/)** (para ícones modernos e leves)
+- **JavaScript (ES6+)**
+- **GitHub Pages** (para o deploy contínuo via `gh-pages`)
