@@ -16,6 +16,17 @@ import {
 // --- DADOS DOS PROJETOS ---
 const devProjects = [
   {
+    id: 6,
+    title: "Aplicação Web para Cafeteria Local",
+    description:
+      "Aplicação web Full-Stack com gerencialmento de cardápio digital, agenda de eventos e reservas. Páginas exclusivas para acesso a cozinha e administração local. ",
+    tags: ["React", "Tailwind CSS", "Vite", "Lucide React", "Firebase", "SPA"],
+    image: "print_cafeteria.png",
+    demo: "https://cafeteriaportfolio.netlify.app",
+    repo: "https://github.com/GutyerrezRoger/cafeteria-landing-page",
+    featured: true,
+  },
+  {
     id: 5,
     title: "Caraval Game Control",
     description:
@@ -24,7 +35,7 @@ const devProjects = [
     image: "print_caraval.jpg",
     demo: "Projeto não permite o pages",
     repo: "https://github.com/GutyerrezRoger/caraval-game-control",
-    featured: true,
+    featured: false,
   },
   {
     id: 3,
@@ -89,11 +100,10 @@ const photos = [
       "ensaios/urbano/img5.jpg",
     ],
   },
-{
+  {
     id: "praia",
     title: "Pré Casamento",
-    description:
-      "O registro de um amor leve, eternizado em fotos",
+    description: "O registro de um amor leve, eternizado em fotos",
     cover: "ensaios/capa_praia.jpg",
     tech: ["Canon T6i", "50mm", "Lightroom"],
     images: [
