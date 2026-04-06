@@ -117,7 +117,7 @@ const photos = [
 
   {
     id: "casamento",
-    title: "Fotografia de Casamento",
+    title: "Pedido de Casamento",
     description: "Momentos inesquecíveis com foco em espontaneidade e emoção.",
     cover: "ensaios/capa_casamento.jpg",
     tech: ["Canon 500D", "50mm", "Photoshop"],
